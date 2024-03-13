@@ -1,0 +1,16 @@
+PODS:
+  - CustomAlertKit (0.1.0)
+
+DEPENDENCIES:
+  - CustomAlertKit (from `../`)
+
+EXTERNAL SOURCES:
+  CustomAlertKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CustomAlertKit: 85122602c7ceba417c0e6f8411d43a493dfcef50
+
+PODFILE CHECKSUM: ac10af3bc542982c6eb486514265e50ffcd2bbb7
+
+COCOAPODS: 1.14.3
