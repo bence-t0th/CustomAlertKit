@@ -23,12 +23,3 @@ class ViewController: UIViewController {
     }
 
 }
-
-struct HE: View {
-    var body: some View {
-        VStack {
-            Text("efdfw")
-        }
-        .padding(16)
-    }
-}

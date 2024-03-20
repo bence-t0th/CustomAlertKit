@@ -15,6 +15,10 @@
 		CE523E522BA07A1F005A25EA /* BottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE523E512BA07A1F005A25EA /* BottomSheet.swift */; };
 		CE523E542BA07C66005A25EA /* CustomAlertKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE523E532BA07C66005A25EA /* CustomAlertKit.swift */; };
 		CE523E562BA07DAD005A25EA /* VisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE523E552BA07DAD005A25EA /* VisualEffectView.swift */; };
+		CE6884152BAB620B00444E4D /* Snackbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6884142BAB620B00444E4D /* Snackbar.swift */; };
+		CE6884172BAB797D00444E4D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6884162BAB797D00444E4D /* Extensions.swift */; };
+		CE6884192BAB79E100444E4D /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6884182BAB79E100444E4D /* ViewModifiers.swift */; };
+		CE68841B2BAB7A4E00444E4D /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE68841A2BAB7A4E00444E4D /* RoundedCorner.swift */; };
 		E49F766B08BBD14FB487441FD941B598 /* Pods-CustomAlertKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1488FE5130892F5D75C1B95E4875E245 /* Pods-CustomAlertKit_Example-dummy.m */; };
 		E647F00EB4565C60142DEDF0649C106D /* CustomAlertKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AD594A57FA2F60F76097F3EB21B4DEC /* CustomAlertKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E6D30F602EA69E2BB7125E977E2B5EE5 /* Pods-CustomAlertKit_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 61F4BA9916480DD6DBBADA1E351433DD /* Pods-CustomAlertKit_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -66,6 +70,10 @@
 		CE523E512BA07A1F005A25EA /* BottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheet.swift; sourceTree = "<group>"; };
 		CE523E532BA07C66005A25EA /* CustomAlertKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertKit.swift; sourceTree = "<group>"; };
 		CE523E552BA07DAD005A25EA /* VisualEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectView.swift; sourceTree = "<group>"; };
+		CE6884142BAB620B00444E4D /* Snackbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snackbar.swift; sourceTree = "<group>"; };
+		CE6884162BAB797D00444E4D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		CE6884182BAB79E100444E4D /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
+		CE68841A2BAB7A4E00444E4D /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
 		CEA280FE90724DA048DDEA7BE51D91C3 /* Pods-CustomAlertKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CustomAlertKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		D109EE34C9322A67BEC4914471ECE52D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D5A4540FBD3A04C22958158E28179A52 /* Pods-CustomAlertKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CustomAlertKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -211,9 +219,13 @@
 		CE523E502BA079E1005A25EA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				CE523E512BA07A1F005A25EA /* BottomSheet.swift */,
 				CE523E532BA07C66005A25EA /* CustomAlertKit.swift */,
+				CE523E512BA07A1F005A25EA /* BottomSheet.swift */,
+				CE6884142BAB620B00444E4D /* Snackbar.swift */,
 				CE523E552BA07DAD005A25EA /* VisualEffectView.swift */,
+				CE68841A2BAB7A4E00444E4D /* RoundedCorner.swift */,
+				CE6884162BAB797D00444E4D /* Extensions.swift */,
+				CE6884182BAB79E100444E4D /* ViewModifiers.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -403,6 +415,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE523E522BA07A1F005A25EA /* BottomSheet.swift in Sources */,
+				CE6884192BAB79E100444E4D /* ViewModifiers.swift in Sources */,
+				CE6884172BAB797D00444E4D /* Extensions.swift in Sources */,
+				CE6884152BAB620B00444E4D /* Snackbar.swift in Sources */,
+				CE68841B2BAB7A4E00444E4D /* RoundedCorner.swift in Sources */,
 				CE523E562BA07DAD005A25EA /* VisualEffectView.swift in Sources */,
 				CE523E542BA07C66005A25EA /* CustomAlertKit.swift in Sources */,
 				BD9930303B4654ECF2FAED47398E86D2 /* CustomAlertKit-dummy.m in Sources */,

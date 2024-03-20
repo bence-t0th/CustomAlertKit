@@ -22,9 +22,11 @@ public extension View {
     ///                     visible.toggle()
     ///                 }
     ///             }) {
-    ///                 Text("Change Visible")
+    ///                 Text("Change vbaisible")
     ///             }
-    ///             .bottomSheet(visible: $visible)
+    ///             .bottomSheet(visible: $visible) {
+    ///                 Text("Text on bottomsheet")
+    ///             }
     ///         }
     ///     }
     ///
@@ -36,7 +38,40 @@ public extension View {
     ///
     /// - Returns: A view that's capable of displaying a bottomsheet with custom
     ///   content
-    func bottomSheet(visible: Binding<Bool>, content: @escaping () -> some View) -> some View {
-        modifier(BottomSheetModifier(visible: visible, customContent: content))
+    func bottomSheet(visible: Binding<Bool>, backgroundColor: Color, content: @escaping () -> some View) -> some View {
+        modifier(BottomSheetModifier(visible: visible, backgroundColor: backgroundColor, customContent: content))
+    }
+    
+    
+    /// Presents a snackbar with custom content when a given condition is true.
+    ///
+    /// Use this modifier to display a snackbar with custom content.
+    ///
+    ///     struct Demo: View {
+    ///         @State var visible = false
+    ///
+    ///         var body: some View {
+    ///             Button(action: {
+    ///                 withAnimation(.bouncy(duration: 0.3)) {
+    ///                     visible.toggle()
+    ///                 }
+    ///             }) {
+    ///                 Text("Change visible")
+    ///             }
+    ///             .snackbar(visible: $visible) {
+    ///                 Text("Text on snackbar")
+    ///             }
+    ///         }
+    ///     }
+    ///
+    /// - Parameters:
+    ///   - visible: A binding to a Boolean value that determines
+    ///   whether to present the snackbar. When the user swipes down this value will be false.
+    ///   - content: The custom content of the snackbar
+    ///
+    /// - Returns: A view that's capable of displaying a snackbar at the bottom of the screen
+    ///   with custom content
+    func snackbar(visible: Binding<Bool>, content: @escaping () -> some View) -> some View {
+        modifier(SnackbarModifier(visible: visible, customContent: content))
     }
 }
