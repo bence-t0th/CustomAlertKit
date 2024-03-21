@@ -10,7 +10,7 @@ import SwiftUI
 struct Snackbar<Content: View>: View {
     @Binding var visible: Bool
     @State var content: Content
-    @State var timer = Timer.publish(every: 3, on: .main, in: .commonModes).autoconnect()
+    @State var timer = Timer.publish(every: 3, on: .main, in: .common).autoconnect()
     
     init(visible: Binding<Bool>, @ViewBuilder content: @escaping () -> Content) {
         self.content = content()
@@ -40,7 +40,7 @@ struct Snackbar<Content: View>: View {
         }
         .onChange(of: visible) { newValue in
             if newValue {
-                timer = Timer.publish(every: 3, on: .main, in: .commonModes).autoconnect()
+                timer = Timer.publish(every: 3, on: .main, in: .common).autoconnect()
             }
         }
         .onReceive(timer) { _ in

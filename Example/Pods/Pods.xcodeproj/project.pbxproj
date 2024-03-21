@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -53,7 +53,7 @@
 		234B43E00C2D3BEB8199967919E096AC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		2EEC25B56962CC54631D587C2E8225B5 /* CustomAlertKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = CustomAlertKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		2FD598966B1E35C8AC37529F5EC1EE6E /* Pods-CustomAlertKit_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CustomAlertKit_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		385018411C45BB07F3069B4F473689CA /* Pods-CustomAlertKit_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-CustomAlertKit_Tests"; path = Pods_CustomAlertKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		385018411C45BB07F3069B4F473689CA /* Pods_CustomAlertKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomAlertKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D6B05448C74F3D6F1E993C45DBB614B /* Pods-CustomAlertKit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CustomAlertKit_Example.modulemap"; sourceTree = "<group>"; };
 		54147C15C896FCFC5203A83EB780B0E0 /* CustomAlertKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CustomAlertKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		61F4BA9916480DD6DBBADA1E351433DD /* Pods-CustomAlertKit_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CustomAlertKit_Tests-umbrella.h"; sourceTree = "<group>"; };
@@ -63,7 +63,7 @@
 		972AF024EACB48F0A13FC8F93BA2F4CA /* CustomAlertKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CustomAlertKit-Info.plist"; sourceTree = "<group>"; };
 		97FB5C486092859BCAA408D93D74B6BA /* Pods-CustomAlertKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CustomAlertKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		9BBAFE190FF3FDC7774B4F9651FB623F /* CustomAlertKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CustomAlertKit-dummy.m"; sourceTree = "<group>"; };
-		9C063059CA733E05BC2AA0626D569538 /* Pods-CustomAlertKit_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-CustomAlertKit_Example"; path = Pods_CustomAlertKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C063059CA733E05BC2AA0626D569538 /* Pods_CustomAlertKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomAlertKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A446B67F31DB15EAABCFF7DCEA478CE3 /* Pods-CustomAlertKit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CustomAlertKit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		BA03B96DE2C2B7F9B025B104342BC047 /* Pods-CustomAlertKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CustomAlertKit_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -126,8 +126,8 @@
 			isa = PBXGroup;
 			children = (
 				54147C15C896FCFC5203A83EB780B0E0 /* CustomAlertKit.framework */,
-				9C063059CA733E05BC2AA0626D569538 /* Pods-CustomAlertKit_Example */,
-				385018411C45BB07F3069B4F473689CA /* Pods-CustomAlertKit_Tests */,
+				9C063059CA733E05BC2AA0626D569538 /* Pods_CustomAlertKit_Example.framework */,
+				385018411C45BB07F3069B4F473689CA /* Pods_CustomAlertKit_Tests.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -143,7 +143,7 @@
 		6D5BEDE65490DE4DE4D2C4B3FADCCB09 /* CustomAlertKit */ = {
 			isa = PBXGroup;
 			children = (
-				CE523E502BA079E1005A25EA /* Classes */,
+				CE68841C2BAB7E0B00444E4D /* Sources */,
 				0373CC9A859EDF4B2F6DFA978DB6A5D7 /* Pod */,
 				8256BC1DD2D72944415495300601820C /* Support Files */,
 			);
@@ -216,7 +216,7 @@
 			path = "Target Support Files/Pods-CustomAlertKit_Example";
 			sourceTree = "<group>";
 		};
-		CE523E502BA079E1005A25EA /* Classes */ = {
+		CE68841C2BAB7E0B00444E4D /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				CE523E532BA07C66005A25EA /* CustomAlertKit.swift */,
@@ -227,7 +227,7 @@
 				CE6884162BAB797D00444E4D /* Extensions.swift */,
 				CE6884182BAB79E100444E4D /* ViewModifiers.swift */,
 			);
-			path = Classes;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -313,7 +313,7 @@
 			);
 			name = "Pods-CustomAlertKit_Tests";
 			productName = Pods_CustomAlertKit_Tests;
-			productReference = 385018411C45BB07F3069B4F473689CA /* Pods-CustomAlertKit_Tests */;
+			productReference = 385018411C45BB07F3069B4F473689CA /* Pods_CustomAlertKit_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		8FA235F032BBE54854328B7A37A0D1D1 /* Pods-CustomAlertKit_Example */ = {
@@ -332,7 +332,7 @@
 			);
 			name = "Pods-CustomAlertKit_Example";
 			productName = Pods_CustomAlertKit_Example;
-			productReference = 9C063059CA733E05BC2AA0626D569538 /* Pods-CustomAlertKit_Example */;
+			productReference = 9C063059CA733E05BC2AA0626D569538 /* Pods_CustomAlertKit_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -350,7 +350,7 @@
 				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -459,8 +459,12 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-CustomAlertKit_Example/Pods-CustomAlertKit_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-CustomAlertKit_Example/Pods-CustomAlertKit_Example.modulemap";
 				OTHER_LDFLAGS = "";
@@ -492,8 +496,12 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-CustomAlertKit_Tests/Pods-CustomAlertKit_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-CustomAlertKit_Tests/Pods-CustomAlertKit_Tests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -560,12 +568,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -587,8 +596,12 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-CustomAlertKit_Tests/Pods-CustomAlertKit_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-CustomAlertKit_Tests/Pods-CustomAlertKit_Tests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -620,8 +633,12 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-CustomAlertKit_Example/Pods-CustomAlertKit_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-CustomAlertKit_Example/Pods-CustomAlertKit_Example.modulemap";
 				OTHER_LDFLAGS = "";
@@ -656,7 +673,11 @@
 				INFOPLIST_FILE = "Target Support Files/CustomAlertKit/CustomAlertKit-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MODULEMAP_FILE = "Target Support Files/CustomAlertKit/CustomAlertKit.modulemap";
 				PRODUCT_MODULE_NAME = CustomAlertKit;
 				PRODUCT_NAME = CustomAlertKit;
@@ -664,7 +685,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -724,7 +745,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -755,14 +776,18 @@
 				INFOPLIST_FILE = "Target Support Files/CustomAlertKit/CustomAlertKit-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MODULEMAP_FILE = "Target Support Files/CustomAlertKit/CustomAlertKit.modulemap";
 				PRODUCT_MODULE_NAME = CustomAlertKit;
 				PRODUCT_NAME = CustomAlertKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
