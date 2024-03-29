@@ -38,8 +38,8 @@ public extension View {
     ///
     /// - Returns: A view that's capable of displaying a bottomsheet with custom
     ///   content
-    func bottomSheet(visible: Binding<Bool>, backgroundColor: Color, content: @escaping () -> some View) -> some View {
-        modifier(BottomSheetModifier(visible: visible, backgroundColor: backgroundColor, customContent: content))
+    func bottomSheet(visible: Binding<Bool>, background: BackgroundType? = nil, bottomSheetBackgroundColor: Color, content: @escaping () -> some View) -> some View {
+        modifier(BottomSheetModifier(visible: visible, background: background, bottomSheetBackgroundColor: bottomSheetBackgroundColor, customContent: content))
     }
     
     
@@ -74,4 +74,9 @@ public extension View {
     func snackbar(visible: Binding<Bool>, content: @escaping () -> some View) -> some View {
         modifier(SnackbarModifier(visible: visible, customContent: content))
     }
+}
+
+public enum BackgroundType {
+    case blur(UIBlurEffect.Style)
+    case color(Color)
 }

@@ -9,13 +9,14 @@ import SwiftUI
 
 struct BottomSheetModifier<CustomContent: View>: ViewModifier {
     @Binding var visible: Bool
-    var backgroundColor: Color
+    var background: BackgroundType?
+    var bottomSheetBackgroundColor: Color
     var customContent: () -> CustomContent
     
     func body(content: Content) -> some View {
         ZStack {
             content
-            BottomSheet(visible: $visible, backgroundColor: backgroundColor) {
+            BottomSheet(visible: $visible, background: background, bottomSheetBackgroundColor: bottomSheetBackgroundColor) {
                 customContent()
             }
         }

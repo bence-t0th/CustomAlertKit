@@ -24,8 +24,7 @@ struct Snackbar<Content: View>: View {
             if visible {
                 content
                     .transition(.move(edge: .bottom).combined(with: .opacity))
-                    .shadow(color: .black.opacity(0.2), radius: 20, x: 0, y: 20)
-                    .padding([.horizontal, .bottom], 16)
+                    .padding(1)
                     .gesture(DragGesture()
                         .onChanged { gesture in
                             if gesture.translation.height > 10 {
@@ -45,7 +44,7 @@ struct Snackbar<Content: View>: View {
         }
         .onReceive(timer) { _ in
             timer.upstream.connect().cancel()
-            withAnimation(.bouncy(duration: 0.3)) {
+            withAnimation {
                 visible = false
             }
         }
