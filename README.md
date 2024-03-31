@@ -1,6 +1,5 @@
 # CustomAlertKit
 
-[![CI Status](https://img.shields.io/travis/bence-t0th/CustomAlertKit.svg?style=flat)](https://travis-ci.org/bence-t0th/CustomAlertKit)
 [![Version](https://img.shields.io/cocoapods/v/CustomAlertKit.svg?style=flat)](https://cocoapods.org/pods/CustomAlertKit)
 [![License](https://img.shields.io/cocoapods/l/CustomAlertKit.svg?style=flat)](https://cocoapods.org/pods/CustomAlertKit)
 [![Platform](https://img.shields.io/cocoapods/p/CustomAlertKit.svg?style=flat)](https://cocoapods.org/pods/CustomAlertKit)
@@ -11,10 +10,11 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
+The pod requires iOS 15 deployment target, and it is compatible only with SwiftUI.
+
 ## Installation
 
-CustomAlertKit is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+CustomAlertKit is available through [CocoaPods](https://cocoapods.org). To install it, simply add the following line to your Podfile:
 
 ```ruby
 pod 'CustomAlertKit'
@@ -22,7 +22,7 @@ pod 'CustomAlertKit'
 
 ## Author
 
-bence-t0th, bence.toth.work@icloud.com
+[Bence Tóth](https://linkedin.com/in/bence-t0th/)
 
 ## License
 
