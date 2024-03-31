@@ -108,3 +108,4 @@ public enum BackgroundType {
     case blur(UIBlurEffect.Style)
     case color(Color)
 }
+
