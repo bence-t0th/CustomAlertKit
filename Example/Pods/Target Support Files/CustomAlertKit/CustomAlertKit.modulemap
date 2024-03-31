@@ -1,6 +1,0 @@
-framework module CustomAlertKit {
-  umbrella header "CustomAlertKit-umbrella.h"
-
-  export *
-  module * { export * }
-}

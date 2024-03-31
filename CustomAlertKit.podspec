@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '15.0'
 
-  s.source_files = 'Sources/**/*'
+  s.source_files = 'Sources/CustomAlertKit/**/*'
   s.swift_version = '5.0'
   
   # s.resource_bundles = {
