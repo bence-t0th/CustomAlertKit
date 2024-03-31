@@ -12,24 +12,24 @@ struct BottomSheet<Content: View>: View {
     @State private var offset = CGSizeZero
     @State var content: Content
     @State var bottomSheetBackground: BackgroundType?
-    @State var bottomSheetBackgroundColor: Color
+    @State var contentBackgroundColor: Color
     
-    var background: AnyView {
+    @ViewBuilder var background: some View {
         switch bottomSheetBackground {
         case .blur(let style):
-            AnyView(VisualEffectView(effect: UIBlurEffect(style: style)))
+            VisualEffectView(effect: UIBlurEffect(style: style))
         case .color(let color):
-            AnyView(color)
+            color
         case nil:
-            AnyView(EmptyView())
+            Color.clear
         }
     }
     
-    init(visible: Binding<Bool>, background: BackgroundType?, bottomSheetBackgroundColor: Color, @ViewBuilder content: @escaping () -> Content) {
+    init(visible: Binding<Bool>, background: BackgroundType?, contentBackgroundColor: Color, @ViewBuilder content: @escaping () -> Content) {
         self._visible = visible
         self.content = content()
         self.bottomSheetBackground = background
-        self.bottomSheetBackgroundColor = bottomSheetBackgroundColor
+        self.contentBackgroundColor = contentBackgroundColor
     }
     
     var body: some View {
@@ -41,7 +41,7 @@ struct BottomSheet<Content: View>: View {
                     .padding(.bottom, .bottomSafeAreaHeight + 50)
                     .frame(width: UIScreen.main.bounds.width)
                     .fixedSize(horizontal: true, vertical: true)
-                    .background(bottomSheetBackgroundColor)
+                    .background(contentBackgroundColor)
                     .cornerRadius(32, corners: [.topLeft, .topRight])
                     .offset(x: 0, y: max(offset.height, -8) + 50)
                     .shadow(color: .black.opacity(0.2), radius: 40, x: 0, y: -20)
@@ -62,7 +62,7 @@ struct BottomSheet<Content: View>: View {
                     .transition(.move(edge: .bottom).animation(.bouncy))
             }
             
-            bottomSheetBackgroundColor
+            contentBackgroundColor
                 .frame(height: 30)
                 .offset(x: 0, y: max(offset.height, -8))
                 .padding(.bottom, -30)
