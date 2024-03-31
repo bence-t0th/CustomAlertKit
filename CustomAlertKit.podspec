@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CustomAlertKit'
-  s.version          = '1.0.0'
-  s.summary          = 'CustomAlertKit provides a customizable bottomsheet and snackbar for any SwiftUI View'
+  s.version          = '1.1.0'
+  s.summary          = 'CustomAlertKit provides a customizable bottomsheet, snackbar and alert for any SwiftUI View'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = 'CustomAlertKit provides a customizable bottomsheet and snackbar for any SwiftUI View. Custom content with fluid animations.'
+  s.description      = 'CustomAlertKit provides a customizable bottomsheet, snackbar and alert for any SwiftUI View. Custom content with fluid animations.'
 
   s.homepage         = 'https://github.com/bence-t0th/CustomAlertKit'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
