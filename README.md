@@ -33,6 +33,8 @@ import CustomAlertKit
 
 ### Bottomsheet
 
+![Bottomsheet](Gifs/bottomsheet.gif)
+
 ```swift
 @State var bottomsheetVisible = false
 
@@ -47,6 +49,8 @@ var body: some View {
 ```
 
 ### Snackbar
+
+![Snackbar](Gifs/snackbar.gif)
 
 ```swift
 @State var snackbarVisible = false
@@ -64,6 +68,8 @@ var body: some View {
 ```
 
 ### Alert
+
+![Alert](Gifs/alert.gif)
 
 ```swift
 @State var alertVisible = false
