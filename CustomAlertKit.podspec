@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CustomAlertKit'
-  s.version          = '2.0.1'
+  s.version          = '2.0.2'
   s.summary          = 'CustomAlertKit provides a customizable bottomsheet, snackbar and alert for any SwiftUI View'
 
   s.description      = 'CustomAlertKit provides a customizable bottomsheet, snackbar and alert for any SwiftUI View. Custom content with fluid animations.'

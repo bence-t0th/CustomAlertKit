@@ -76,8 +76,10 @@ struct BottomSheet<Content: View>: View {
             background
                 .ignoresSafeArea()
                 .onTapGesture {
-                    withAnimation {
-                        visible.toggle()
+                    if closable {
+                        withAnimation {
+                            visible.toggle()
+                        }
                     }
                 }
                 .opacity(visible ? 1 : 0)
