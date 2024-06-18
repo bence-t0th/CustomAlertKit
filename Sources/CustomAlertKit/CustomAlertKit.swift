@@ -32,12 +32,13 @@ public extension View {
     ///   - background: BackgroundType, that determines the background behind
     ///   the bottomsheet
     ///   - contentBackgroundColor: The background color of the bottomsheet
+    ///   - closable: Determines if the bottomsheet is closable or not
     ///   - content: The custom content of the bottomsheet
     ///
     /// - Returns: A view that's capable of displaying a bottomsheet with custom
     ///   content
-    func bottomSheet(visible: Binding<Bool>, background: BackgroundType? = nil, contentBackgroundColor: Color, content: @escaping () -> some View) -> some View {
-        modifier(BottomSheetModifier(visible: visible, background: background, contentBackgroundColor: contentBackgroundColor, customContent: content))
+    func bottomSheet(visible: Binding<Bool>, background: BackgroundType? = nil, contentBackgroundColor: Color, closable: Bool = true, content: @escaping () -> some View) -> some View {
+        modifier(BottomSheetModifier(visible: visible, background: background, contentBackgroundColor: contentBackgroundColor, closable: closable, customContent: content))
     }
     
     

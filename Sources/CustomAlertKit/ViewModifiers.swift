@@ -11,12 +11,13 @@ struct BottomSheetModifier<CustomContent: View>: ViewModifier {
     @Binding var visible: Bool
     var background: BackgroundType?
     var contentBackgroundColor: Color
+    var closable: Bool
     var customContent: () -> CustomContent
     
     func body(content: Content) -> some View {
         ZStack {
             content
-            BottomSheet(visible: $visible, background: background, contentBackgroundColor: contentBackgroundColor) {
+            BottomSheet(visible: $visible, background: background, contentBackgroundColor: contentBackgroundColor, closable: closable) {
                 customContent()
             }
         }

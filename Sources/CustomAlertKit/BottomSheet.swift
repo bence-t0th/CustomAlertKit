@@ -13,6 +13,7 @@ struct BottomSheet<Content: View>: View {
     @State var content: Content
     @State var bottomSheetBackground: BackgroundType?
     @State var contentBackgroundColor: Color
+    private var closable: Bool
     
     @ViewBuilder var background: some View {
         switch bottomSheetBackground {
@@ -25,16 +26,17 @@ struct BottomSheet<Content: View>: View {
         }
     }
     
-    init(visible: Binding<Bool>, background: BackgroundType?, contentBackgroundColor: Color, @ViewBuilder content: @escaping () -> Content) {
+    init(visible: Binding<Bool>, background: BackgroundType?, contentBackgroundColor: Color, closable: Bool, @ViewBuilder content: @escaping () -> Content) {
         self._visible = visible
         self.content = content()
         self.bottomSheetBackground = background
         self.contentBackgroundColor = contentBackgroundColor
+        self.closable = closable
     }
     
     var body: some View {
         VStack(spacing: 0) {
-            Spacer()
+            Spacer(minLength: 0)
             
             if visible {
                 content
@@ -43,7 +45,7 @@ struct BottomSheet<Content: View>: View {
                     .fixedSize(horizontal: true, vertical: true)
                     .background(contentBackgroundColor)
                     .cornerRadius(32, corners: [.topLeft, .topRight])
-                    .offset(x: 0, y: max(offset.height, -8) + 50)
+                    .offset(x: 0, y: closable ? max(offset.height, -8) : 0 + 50)
                     .shadow(color: .black.opacity(0.2), radius: 40, x: 0, y: -20)
                     .shadow(color: .black.opacity(0.06), radius: 10, x: 0, y: -10)
                     .gesture(DragGesture()
@@ -51,11 +53,13 @@ struct BottomSheet<Content: View>: View {
                             offset = gesture.translation
                         }
                         .onEnded { _ in
-                            withAnimation {
-                                if offset.height > 100 {
-                                    visible = false
+                            if closable {
+                                withAnimation {
+                                    if offset.height > 100 {
+                                        visible = false
+                                    }
+                                    offset = .zero
                                 }
-                                offset = .zero
                             }
                         }
                     )
